@@ -1,12 +1,12 @@
 CREATE TABLE Pets (
 id INT AUTO_INCREMENT,
 Typ VARCHAR(12),
-Name VARCHAR(20),
+Nick VARCHAR(20),
 BirthDay DATE,
-Commands TEXT,
+Commands SET('Sit','Stay','Fetch','Pounce','Roll','Hide','Paw','Bark','Scratch','Spin','Meow','Jump','Trot','Canter','Gallop','Walk','Carry Load','Bray','Kick','Run'),
 PRIMARY KEY(id));
 
-INSERT INTO Pets (Typ, Name, BirthDay, Commands)
-SELECT 'Cat', Name, BirthDay, Commands FROM Cat
-UNION ALL SELECT 'Dog', Name, BirthDay, Commands FROM Dog
-UNION ALL SELECT 'Hamster', Name, BirthDay, Commands FROM Hamster;
+INSERT INTO Pets (Typ, Nick, BirthDay, Commands)
+SELECT 'Cat', Nick, BirthDay, Commands FROM Cat
+UNION ALL SELECT 'Dog', Nick, BirthDay, Commands FROM Dog
+UNION ALL SELECT 'Hamster', Nick, BirthDay, Commands FROM Hamster;
